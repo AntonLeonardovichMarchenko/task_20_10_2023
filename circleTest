@@ -1,0 +1,24 @@
+import math
+
+class Circle:
+    def __init__(self, radius: float) -> None:
+        if radius < 0:
+            raise ValueError('The radius cannot be negative')
+
+        self._radius = radius
+
+    def area(self) -> float:
+        return math.pi * math.pow(self._radius, 2)
+
+    def perimeter(self) -> float:
+        return 2 * math.pi * self._radius
+
+# def goCircle(radius):
+#     c = Circle(radius)
+#     cArea = c.area()
+#     cArea = round(cArea, 3)
+#     cPerimeter = c.perimeter()
+#     cPerimeter = round(cPerimeter, 3)
+#     print(cArea, cPerimeter)
+#
+# goCircle(25)
